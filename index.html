@@ -62,6 +62,19 @@
   .app p { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
   footer { margin-top: 72px; font-size: 13px; color: var(--muted); }
+
+  /* media */
+  .shots { display: flex; gap: 10px; overflow-x: auto; padding: 14px 0 6px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
+  .shots::-webkit-scrollbar { height: 6px; }
+  .shots::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+  .shots > * { flex: 0 0 auto; height: 360px; border-radius: 14px; border: 1px solid var(--line); background: var(--card); scroll-snap-align: start; }
+  .shots img, .shots video { width: auto; object-fit: cover; display: block; }
+  .shots video { aspect-ratio: 588 / 1280; }
+  .square { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+  .square > * { width: 100%; aspect-ratio: 1; border-radius: 12px; border: 1px solid var(--line); display: block; object-fit: cover; background: var(--card); }
+  .video16 { position: relative; margin-top: 14px; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
+  .video16 iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .caption { font-size: 12px; color: var(--muted); margin-top: 6px; }
   @media (max-width: 520px) {
     main { padding-top: 48px; }
     .apps { grid-template-columns: 1fr; }
@@ -94,6 +107,17 @@
     <h3><a href="https://github.com/aaronzzheng/matcharonju">Matcha</a></h3>
     <p>I drink a lot of matcha. This tracks and ranks every one you try, learns your taste, and predicts what you'll like. 612 matcha from 91 Japanese houses.</p>
     <span class="stack">SwiftUI · iOS 17+ · CloudKit · runs in the Simulator with just Xcode</span>
+    <div class="shots" aria-label="Matcha screenshots">
+      <video src="media/matcha-demo.mp4" poster="media/matcha-1-welcome.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <img src="media/matcha-4-home.jpg" alt="Matcha home screen with a greeting card and recommendations" loading="lazy">
+      <img src="media/matcha-5-product.jpg" alt="A matcha's product page with editorial, personal, and match scores" loading="lazy">
+      <img src="media/matcha-3-taste-profile.jpg" alt="Taste profile radar chart after onboarding" loading="lazy">
+      <img src="media/matcha-6-houses.jpg" alt="Browse by house, grouped by growing region" loading="lazy">
+      <img src="media/matcha-2-onboarding.jpg" alt="Onboarding step rating a few matcha" loading="lazy">
+      <img src="media/matcha-7-profile.jpg" alt="Profile with Matcha DNA" loading="lazy">
+      <img src="media/matcha-1-welcome.jpg" alt="Welcome screen" loading="lazy">
+    </div>
+    <p class="caption">Onboarding to first recommendation, sped up 8×. Running in the iOS Simulator.</p>
   </div>
 
   <h2>little mac apps</h2>
@@ -111,6 +135,7 @@
     <h3><a href="https://github.com/JunhoHwoang/HackOHIO-2025">HackOHIO 2025 – SmartParking</a><small>2nd place, Honda Challenge</small></h3>
     <p>Live campus parking availability. Node APIs, React + Leaflet frontend, and an OpenCV MobileNetV3 model that spots open stalls with 98% accuracy. 2nd out of 190 teams.</p>
     <div class="links"><a href="https://youtu.be/uGOvJDlFeZ0">Demo</a><a href="https://medium.com/99p-labs/hack-ohi-o-2025-14330ac1931e">Write-up</a></div>
+    <div class="video16"><iframe src="https://www.youtube-nocookie.com/embed/uGOvJDlFeZ0" title="SmartParking demo" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
   </div>
   <div class="project">
     <h3><a href="https://github.com/dlwogk7939/DataIO-2026">Data I/O 2026 – Campus Energy Analytics</a></h3>
@@ -122,6 +147,11 @@
   <div class="project">
     <h3><a href="https://github.com/aaronzzheng/SleepTamagotchi">Sleep Tamagotchi</a></h3>
     <p>A Wear OS virtual pet that wants you to sleep better. Built in Godot during my internship at Kyoto University of Advanced Sciences, summer 2025. Custom Java plugins for the watch's step, light, and heart rate sensors.</p>
+    <div class="square">
+      <video src="media/sleep-tamagotchi-room.mp4" poster="media/sleep-tamagotchi-room.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <img src="media/sleep-tamagotchi-room.jpg" alt="The pet's bedroom with health and food bars" loading="lazy">
+    </div>
+    <p class="caption">The bedroom scene, rendered straight from the Godot project.</p>
   </div>
   <div class="project">
     <h3><a href="https://github.com/aaronzzheng/meli">meli</a></h3>
