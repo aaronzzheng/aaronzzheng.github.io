@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aaron Zheng</title>
+<meta name="description" content="CS student at Ohio State. I build Swift apps for Mac and iPhone, a React Native app for an animal sanctuary, and the occasional hackathon thing.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d1d1f'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='-apple-system,Helvetica,Arial' font-size='16' font-weight='600' fill='%23fff'%3Eaz%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #fbfbfa;
+    --fg: #1d1d1f;
+    --muted: #6e6e73;
+    --line: #e5e5e3;
+    --accent: #2f6fed;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111113;
+      --fg: #ececec;
+      --muted: #9a9aa2;
+      --line: #26262a;
+      --accent: #6d9cff;
+      --card: #18181b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 72px 20px 96px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1 { font-size: 30px; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 14px; text-transform: lowercase; letter-spacing: 0.04em; color: var(--muted); font-weight: 600; margin: 56px 0 16px; }
+  p { margin: 0 0 14px; }
+  .lede { font-size: 18px; color: var(--fg); }
+  .contact { color: var(--muted); font-size: 15px; margin-top: 18px; }
+  .contact a { color: var(--fg); border-bottom: 1px solid var(--line); }
+  .contact a:hover { text-decoration: none; border-color: var(--fg); }
+  .contact span { margin: 0 8px; color: var(--line); }
+
+  .project { padding: 18px 0; border-top: 1px solid var(--line); }
+  .project:last-child { border-bottom: 1px solid var(--line); }
+  .project h3 { font-size: 17px; margin: 0 0 4px; font-weight: 600; }
+  .project h3 a { color: var(--fg); }
+  .project h3 small { font-weight: 500; color: var(--muted); font-size: 13px; margin-left: 8px; }
+  .project p { margin: 0; color: var(--fg); }
+  .project .stack { display: block; margin-top: 8px; font-size: 13px; color: var(--muted); }
+  .project .links { margin-top: 8px; font-size: 14px; }
+  .project .links a + a { margin-left: 14px; }
+
+  .apps { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .app { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .app a { color: var(--fg); font-weight: 600; }
+  .app p { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
+  .note { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+  footer { margin-top: 72px; font-size: 13px; color: var(--muted); }
+  @media (max-width: 520px) {
+    main { padding-top: 48px; }
+    .apps { grid-template-columns: 1fr; }
+    h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>hey, I'm Aaron</h1>
+  <p class="lede">CS student at Ohio State. I mostly build things I want to exist: iOS and macOS apps in Swift, and a React Native app for an animal sanctuary nonprofit.</p>
+  <p class="contact">
+    <a href="mailto:zheng.2274@osu.edu">zheng.2274@osu.edu</a><span>·</span>
+    <a href="https://github.com/aaronzzheng">GitHub</a><span>·</span>
+    <a href="https://linkedin.com/in/aaronzzheng">LinkedIn</a>
+  </p>
+
+  <h2>what I'm working on</h2>
+  <div class="project">
+    <h3>Sanctuary Connect <small>private</small></h3>
+    <p>Sponsor an animal at a sanctuary and get a private feed of updates about it. Sanctuary staff post updates and run donation campaigns from the same app. One codebase, iOS and Android, shipped as v1.0.</p>
+    <span class="stack">React Native + Expo · Firebase · 25+ Cloud Functions · Stripe subscriptions with Apple Pay and Google Pay</span>
+  </div>
+  <div class="project">
+    <h3>Lumen <small>private</small></h3>
+    <p>Apple Photos has no way to edit just part of a picture, so I made one. Click a subject, get a mask, adjust only that. Eight kinds of masks that stack, plus a heal tool. Runs as a standalone app and as an editing extension inside Photos.</p>
+    <span class="stack">Swift · AppKit · Vision · Photos editing extension</span>
+  </div>
+  <div class="project">
+    <h3><a href="https://github.com/aaronzzheng/matcharonju">Matcha</a></h3>
+    <p>I drink a lot of matcha. This tracks and ranks every one you try, learns your taste, and predicts what you'll like. 612 matcha from 91 Japanese houses.</p>
+    <span class="stack">SwiftUI · iOS 17+ · CloudKit · runs in the Simulator with just Xcode</span>
+  </div>
+
+  <h2>little mac apps</h2>
+  <p class="note">Things that bugged me about macOS, fixed in the menu bar. All Swift, no dependencies, one script to build and install.</p>
+  <div class="apps">
+    <div class="app"><a href="https://github.com/aaronzzheng/VolBoost">VolBoost</a><p>volume per app, and louder than 100% when you need it</p></div>
+    <div class="app"><a href="https://github.com/aaronzzheng/ClipStack">ClipStack</a><p>the last 10 things you copied</p></div>
+    <div class="app"><a href="https://github.com/aaronzzheng/Vigil">Vigil</a><p>keep the Mac awake, and see what else is</p></div>
+    <div class="app"><a href="https://github.com/aaronzzheng/Shelf">Shelf</a><p>somewhere to put files down while you find where they belong</p></div>
+    <div class="app"><a href="https://github.com/aaronzzheng/Tidy">Tidy</a><p>renames screenshots, sorts Downloads</p></div>
+  </div>
+
+  <h2>hackathons</h2>
+  <div class="project">
+    <h3><a href="https://github.com/JunhoHwoang/HackOHIO-2025">HackOHIO 2025 – SmartParking</a><small>2nd place, Honda Challenge</small></h3>
+    <p>Live campus parking availability. Node APIs, React + Leaflet frontend, and an OpenCV MobileNetV3 model that spots open stalls with 98% accuracy. 2nd out of 190 teams.</p>
+    <div class="links"><a href="https://youtu.be/uGOvJDlFeZ0">Demo</a><a href="https://medium.com/99p-labs/hack-ohi-o-2025-14330ac1931e">Write-up</a></div>
+  </div>
+  <div class="project">
+    <h3><a href="https://github.com/dlwogk7939/DataIO-2026">Data I/O 2026 – Campus Energy Analytics</a></h3>
+    <p>Dashboard that predicts building electricity usage from the weather.</p>
+    <span class="stack">React + TypeScript · Python (pandas, scikit-learn) prediction API</span>
+  </div>
+
+  <h2>older</h2>
+  <div class="project">
+    <h3><a href="https://github.com/aaronzzheng/SleepTamagotchi">Sleep Tamagotchi</a></h3>
+    <p>A Wear OS virtual pet that wants you to sleep better. Built in Godot during my internship at Kyoto University of Advanced Sciences, summer 2025. Custom Java plugins for the watch's step, light, and heart rate sensors.</p>
+  </div>
+  <div class="project">
+    <h3><a href="https://github.com/aaronzzheng/meli">meli</a></h3>
+    <p>Rank the music you've listened to.</p>
+    <span class="stack">Kotlin · Spotify API</span>
+  </div>
+
+  <footer>Made with one HTML file. <a href="https://github.com/aaronzzheng/aaronzzheng.github.io">Source</a></footer>
+</main>
+</body>
+</html>
