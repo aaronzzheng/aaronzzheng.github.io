@@ -56,7 +56,7 @@
   .project .links { margin-top: 8px; font-size: 14px; }
   .project .links a + a { margin-left: 14px; }
 
-  .apps { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: start; }
+  .apps { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: stretch; }
   .app { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
   .app a { color: var(--fg); font-weight: 600; }
   .app p { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
@@ -76,8 +76,11 @@
   .video16 iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .caption { font-size: 12px; color: var(--muted); margin-top: 6px; }
   .banner { display: block; width: 100%; height: auto; margin-top: 14px; border-radius: 12px; border: 1px solid var(--line); }
-  .app .demo { margin: 10px -4px 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); background: #2b2b2e; }
-  .app .demo video, .app .demo img { display: block; width: 100%; height: auto; }
+  .app { display: flex; flex-direction: column; }
+  .app p { flex: 1; }
+  .app .demo { margin: 12px 0 0; height: 300px; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); background: #202023; }
+  .app .demo video, .app .demo img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center top; }
+  @media (max-width: 520px) { .app .demo { height: 260px; } }
   .wide { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
   .wide > * { width: 100%; border-radius: 12px; border: 1px solid var(--line); display: block; background: var(--card); }
   .wide .span { grid-column: 1 / -1; }
@@ -91,7 +94,7 @@
 <body>
 <main>
   <h1>hey, I'm Aaron</h1>
-  <p class="lede">CS student at Ohio State. I mostly build things I want to exist: iOS and macOS apps in Swift, and a React Native app for an animal sanctuary nonprofit.</p>
+  <p class="lede">CS student at Ohio State. I build apps for Mac and iPhone, mostly in Swift, and the occasional hackathon project.</p>
   <p class="contact">
     <a href="mailto:zheng.2274@osu.edu">zheng.2274@osu.edu</a><span>·</span>
     <a href="https://github.com/aaronzzheng">GitHub</a><span>·</span>
