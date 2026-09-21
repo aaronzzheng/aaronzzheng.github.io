@@ -56,7 +56,7 @@
   .project .links { margin-top: 8px; font-size: 14px; }
   .project .links a + a { margin-left: 14px; }
 
-  .apps { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .apps { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: start; }
   .app { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
   .app a { color: var(--fg); font-weight: 600; }
   .app p { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
@@ -75,6 +75,11 @@
   .video16 { position: relative; margin-top: 14px; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
   .video16 iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .caption { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .app .demo { margin: 10px -4px 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); background: #2b2b2e; }
+  .app .demo video, .app .demo img { display: block; width: 100%; height: auto; }
+  .wide { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+  .wide > * { width: 100%; border-radius: 12px; border: 1px solid var(--line); display: block; background: var(--card); }
+  .wide .span { grid-column: 1 / -1; }
   @media (max-width: 520px) {
     main { padding-top: 48px; }
     .apps { grid-template-columns: 1fr; }
@@ -102,6 +107,12 @@
     <h3>Lumen <small>private</small></h3>
     <p>Apple Photos has no way to edit just part of a picture, so I made one. Click a subject, get a mask, adjust only that. Eight kinds of masks that stack, plus a heal tool. Runs as a standalone app and as an editing extension inside Photos.</p>
     <span class="stack">Swift · AppKit · Vision · Photos editing extension</span>
+    <div class="wide">
+      <video class="span" src="media/lumen.mp4" poster="media/lumen.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <img src="media/lumen-mask.jpg" alt="Lumen's Masks tab after selecting the subject" loading="lazy">
+      <img src="media/lumen-showmask.jpg" alt="The same mask shown as an overlay" loading="lazy">
+    </div>
+    <p class="caption">Masks tab: one click finds the subject, and the overlay shows exactly what an adjustment will touch.</p>
   </div>
   <div class="project">
     <h3><a href="https://github.com/aaronzzheng/matcharonju">Matcha</a></h3>
@@ -123,11 +134,11 @@
   <h2>little mac apps</h2>
   <p class="note">Things that bugged me about macOS, fixed in the menu bar. All Swift, no dependencies, one script to build and install.</p>
   <div class="apps">
-    <div class="app"><a href="https://github.com/aaronzzheng/VolBoost">VolBoost</a><p>volume per app, and louder than 100% when you need it</p></div>
-    <div class="app"><a href="https://github.com/aaronzzheng/ClipStack">ClipStack</a><p>the last 10 things you copied</p></div>
-    <div class="app"><a href="https://github.com/aaronzzheng/Vigil">Vigil</a><p>keep the Mac awake, and see what else is</p></div>
-    <div class="app"><a href="https://github.com/aaronzzheng/Shelf">Shelf</a><p>somewhere to put files down while you find where they belong</p></div>
-    <div class="app"><a href="https://github.com/aaronzzheng/Tidy">Tidy</a><p>renames screenshots, sorts Downloads</p></div>
+    <div class="app"><a href="https://github.com/aaronzzheng/VolBoost">VolBoost</a><p>volume per app, and louder than 100% when you need it</p><div class="demo"><video src="media/volboost.mp4" poster="media/volboost.png" autoplay muted loop playsinline preload="metadata"></video></div></div>
+    <div class="app"><a href="https://github.com/aaronzzheng/ClipStack">ClipStack</a><p>the last 10 things you copied</p><div class="demo"><video src="media/clipstack.mp4" poster="media/clipstack.png" autoplay muted loop playsinline preload="metadata"></video></div></div>
+    <div class="app"><a href="https://github.com/aaronzzheng/Vigil">Vigil</a><p>keep the Mac awake, and see what else is</p><div class="demo"><video src="media/vigil.mp4" poster="media/vigil.png" autoplay muted loop playsinline preload="metadata"></video></div></div>
+    <div class="app"><a href="https://github.com/aaronzzheng/Shelf">Shelf</a><p>somewhere to put files down while you find where they belong</p><div class="demo"><video src="media/shelf.mp4" poster="media/shelf.png" autoplay muted loop playsinline preload="metadata"></video></div></div>
+    <div class="app"><a href="https://github.com/aaronzzheng/Tidy">Tidy</a><p>renames screenshots, sorts Downloads</p><div class="demo"><video src="media/tidy.mp4" poster="media/tidy.png" autoplay muted loop playsinline preload="metadata"></video></div></div>
   </div>
 
   <h2>hackathons</h2>
