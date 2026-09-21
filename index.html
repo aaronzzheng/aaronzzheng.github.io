@@ -75,6 +75,7 @@
   .video16 { position: relative; margin-top: 14px; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
   .video16 iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .caption { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .banner { display: block; width: 100%; height: auto; margin-top: 14px; border-radius: 12px; border: 1px solid var(--line); }
   .app .demo { margin: 10px -4px 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); background: #2b2b2e; }
   .app .demo video, .app .demo img { display: block; width: 100%; height: auto; }
   .wide { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
@@ -102,14 +103,19 @@
     <h3>Sanctuary Connect <small>private</small></h3>
     <p>Sponsor an animal at a sanctuary and get a private feed of updates about it. Sanctuary staff post updates and run donation campaigns from the same app. One codebase, iOS and Android, shipped as v1.0.</p>
     <span class="stack">React Native + Expo · Firebase · 25+ Cloud Functions · Stripe subscriptions with Apple Pay and Google Pay</span>
+    <img class="banner" src="media/sc-banner.jpg" alt="Sanctuary Connect: every animal has a story, be part of theirs" loading="lazy">
     <div class="shots" aria-label="Sanctuary Connect screenshots">
+      <img src="media/sc-discover.jpg" alt="Sponsor view: discover animals available for monthly sponsorship" loading="lazy">
+      <img src="media/sc-sponsor-animal.jpg" alt="Sponsor view: an animal's story with a monthly sponsorship button" loading="lazy">
       <img src="media/sanctuary-4-animals.jpg" alt="A sanctuary's animals, each with a monthly sponsorship price" loading="lazy">
       <img src="media/sanctuary-5-animal.jpg" alt="An animal's profile: photo, story, sponsors, and monthly amount" loading="lazy">
-      <img src="media/sanctuary-3-detail.jpg" alt="Sanctuary overview with animals, posts, sponsors, and recurring revenue" loading="lazy">
-      <img src="media/sanctuary-2-sanctuaries.jpg" alt="Admin list of sanctuaries with Stripe status" loading="lazy">
-      <img src="media/sanctuary-1-overview.jpg" alt="Admin dashboard overview" loading="lazy">
+      <img src="media/sc-staff-dashboard.jpg" alt="Staff dashboard: post an update, pending posts, active animals, comments" loading="lazy">
+      <img src="media/sc-staff-animals.jpg" alt="Staff view: manage the sanctuary's animals" loading="lazy">
+      <img src="media/sc-staff-animal-detail.jpg" alt="Staff view: set an animal's availability and sponsorship price" loading="lazy">
+      <img src="media/sanctuary-3-detail.jpg" alt="Admin view of a sanctuary: animals, posts, sponsors, recurring revenue" loading="lazy">
+      <img src="media/sc-welcome.jpg" alt="Welcome screen" loading="lazy">
     </div>
-    <p class="caption">The admin side of the app: every sanctuary, its animals, and who sponsors them. Dev data.</p>
+    <p class="caption">Three sides of one app: sponsors discover and sponsor animals, staff post updates and manage them, admins oversee every sanctuary.</p>
   </div>
   <div class="project">
     <h3>Lumen <small>private</small></h3>
