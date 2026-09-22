@@ -70,6 +70,7 @@
   .shots > * { flex: 0 0 auto; height: 360px; border-radius: 14px; border: 1px solid var(--line); background: var(--card); scroll-snap-align: start; }
   .shots img, .shots video { width: auto; object-fit: cover; display: block; }
   .shots video { aspect-ratio: 588 / 1280; }
+  .shots video.sq { aspect-ratio: 1; }
   .square { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
   .square > * { width: 100%; aspect-ratio: 1; border-radius: 12px; border: 1px solid var(--line); display: block; object-fit: cover; background: var(--card); }
   .video16 { position: relative; margin-top: 14px; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
@@ -176,12 +177,18 @@
   <h2>older</h2>
   <div class="project">
     <h3><a href="https://github.com/aaronzzheng/SleepTamagotchi">Sleep Tamagotchi</a></h3>
-    <p>A Wear OS virtual pet that wants you to sleep better. Built in Godot during my internship at Kyoto University of Advanced Sciences, summer 2025. Custom Java plugins for the watch's step, light, and heart rate sensors.</p>
-    <div class="square">
-      <video src="media/sleep-tamagotchi-room.mp4" poster="media/sleep-tamagotchi-room.jpg" autoplay muted loop playsinline preload="metadata"></video>
-      <img src="media/sleep-tamagotchi-room.jpg" alt="The pet's bedroom with health and food bars" loading="lazy">
+    <p>A Wear OS virtual pet that wants you to sleep better. Started in Godot during my internship at Kyoto University of Advanced Sciences, summer 2025, with custom Java plugins for the watch's step, light, and heart rate sensors. Since then I've built out the game around sleep: you log nights (or the watch does), and the pet's health, coins, evolution, and daily quests all follow how well you slept.</p>
+    <span class="stack">Godot 4 · GDScript · Android / Wear OS · Health Connect · 120 headless tests</span>
+    <div class="shots" aria-label="Sleep Tamagotchi screenshots">
+      <video class="sq" src="media/sleep-tamagotchi-loop.mp4" poster="media/sleep-tamagotchi-bedroom.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <img src="media/sleep-tamagotchi-bedroom.jpg" alt="The bedroom: health and food bars, today's quest, and a Go to bed button" loading="lazy">
+      <img src="media/sleep-tamagotchi-summary.jpg" alt="Summary panel with evolution progress, daily quests, and a seven-night sleep chart" loading="lazy">
+      <img src="media/sleep-tamagotchi-shop.jpg" alt="Shop with snack, medicine, and toy" loading="lazy">
+      <img src="media/sleep-tamagotchi-flashcards.jpg" alt="Flashcards mini-game in the study room" loading="lazy">
+      <img src="media/sleep-tamagotchi-bedroom-sleeping.jpg" alt="The pet asleep with the room dimmed and a Wake up timer" loading="lazy">
+      <img src="media/sleep-tamagotchi-onboarding.jpg" alt="First-run onboarding: name your pet" loading="lazy">
     </div>
-    <p class="caption">The bedroom scene, rendered straight from the Godot project.</p>
+    <p class="caption">Buying a snack, going to bed, and waking up to the night's reward. Rendered straight from the Godot project.</p>
   </div>
   <div class="project">
     <h3><a href="https://github.com/aaronzzheng/meli">meli</a></h3>
