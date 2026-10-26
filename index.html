@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aaron Zheng</title>
-<meta name="description" content="Aaron Zheng. CS student at Ohio State. Into hiking, traveling, cooking, eating, working out, and badminton. Projects: Matcha, Lumen, Sanctuary Connect, and five little Mac apps.">
+<meta name="description" content="Aaron Zheng. CS student at Ohio State. Into hiking, traveling, cooking, eating, working out, and badminton. Projects: Matcha, Lumen, Sanctuary Connect, VisImageNavigator, CPR Coach, and five little Mac apps.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231d1d1f'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='-apple-system,Helvetica,Arial' font-size='16' font-weight='600' fill='%23fff'%3Eaz%3C/text%3E%3C/svg%3E">
 <style>
   :root {
@@ -150,6 +150,12 @@
     </div>
     <p class="caption">Onboarding to first recommendation, sped up 8×. Running in the iOS Simulator.</p>
   </div>
+  <div class="project">
+    <h3><a href="https://visimagenavigator.github.io/">VisImageNavigator</a><small>research, Ohio State</small></h3>
+    <p>A browser for every figure and table ever published at IEEE VIS, built on the VIS30K dataset. It stopped at 2020, so I extended it through 2025: collected and cleaned the metadata, then added 3,600 figures from VIS 2021–2025 papers, 1,023 short paper figures, and 3,323 tables, equations, and algorithms. It now covers 39,339 figures and tables from 1990 to 2025.</p>
+    <span class="stack">Python (pandas) scripts for extraction and metadata · static JavaScript site on GitHub Pages</span>
+    <img class="banner" src="media/vin-explore.jpg" alt="VisImageNavigator explore view: filters by conference, year, and visualization type above a grid of figures" loading="lazy">
+  </div>
 
   <h2>little mac apps</h2>
   <p class="note">Things that bugged me about macOS, fixed in the menu bar. All Swift, no dependencies, one script to build and install.</p>
@@ -162,6 +168,19 @@
   </div>
 
   <h2>hackathons</h2>
+  <div class="project">
+    <h3><a href="https://github.com/aaronzzheng/cpr-coach">HackOHI/O 2026 – CPR Coach</a></h3>
+    <p>Real-time CPR coaching from the iPhone and Apple Watch you already own. The watch feels every compression at 100 Hz, the phone's camera checks your elbows, shoulders, and hand placement, and an extended Kalman filter fuses the two into drift-free depth in centimetres. It talks you through it hands-free in seven languages, warns you before fatigue sets in, and hands paramedics a report at the end.</p>
+    <span class="stack">Swift 6 + SwiftUI · watchOS · Core Motion · Apple Vision 3D pose · Speech · Foundation Models · React web version · FastAPI backend</span>
+    <div class="links"><a href="https://youtu.be/oubjYkOBK_0">Demo</a></div>
+    <div class="shots" aria-label="CPR Coach screenshots">
+      <img src="media/cpr-triage.jpg" alt="Emergency check: are they responding?" loading="lazy">
+      <img src="media/cpr-running.jpg" alt="Live coaching with compression rate and depth" loading="lazy">
+      <img src="media/cpr-aed.jpg" alt="AED pad placement guide" loading="lazy">
+      <img src="media/cpr-report.jpg" alt="Report for paramedics with a QR code" loading="lazy">
+    </div>
+    <p class="caption">A rescue start to finish: check the person, coach every compression, place the AED pads, hand off the report.</p>
+  </div>
   <div class="project">
     <h3><a href="https://github.com/JunhoHwoang/HackOHIO-2025">HackOHIO 2025 – SmartParking</a><small>2nd place, Honda Challenge</small></h3>
     <p>Live campus parking availability. Node APIs, React + Leaflet frontend, and an OpenCV MobileNetV3 model that spots open stalls with 98% accuracy. 2nd out of 190 teams.</p>
